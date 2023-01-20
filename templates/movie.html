@@ -1,0 +1,22 @@
+{% load static %}
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static 'css/s.css' %}"/>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"></script>
+  </head>
+<body>
+  <a href="/">go back</a><br>
+  <h1>Movies</h1>
+  <table><tr><td>enter a new movie:</td><td><input type="text" id="movie"/></td><td><button id="add">add</button></td></tr></table>
+  <hr/>
+  <table class="movietable"><th>Movie Name</th><th>In Stock</th><th>Add/Remove</th></table>
+  <hr/>
+  <table class="movietable" id="mov1"></table>
+  <hr/>
+  <p id="mes"></p>
+<script src="{% static 'js/movie.js' %}"></script>
+</body>
+</html>

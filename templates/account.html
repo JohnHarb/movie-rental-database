@@ -1,0 +1,23 @@
+{% load static %}
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static 'css/s.css' %}"/>
+  </head>
+<body>
+  <a href="/">go back</a><br>
+  <h1>Create Account</h1>
+  <form method="post" action="/dbUser/">
+		{% csrf_token %}
+			first name: <input type="text" id="fname" name="fname"/><br/>
+			last name: <input type="text" id="lname" name="lname"/><br/>
+      email: <input type="text" id="email" name="email"/><br><br>
+			<input value="create account" type="submit">
+	</form>
+  <hr/>
+  <p>first name: {{fname}}</p> 
+  <p>last name: {{lname}}</p>
+  <p>email: {{email}}</p>
+  <hr/>
+  <p id="mes">{{message}}</p>
+</body>
+</html>
